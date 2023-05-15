@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Videó lejátszása</title>
+
+    <style>
+        article, section, aside, nav, header, footer {
+            display: block;
+        }
+
+        .fejlec {
+            font-size: 18pt;
+            font-family: Helvetica;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .lablec {
+            font-size: 10pt;
+            font-family: Helvetica;
+            margin-top: 40px;
+            width: 560px;
+            border-top: 3px #888888 double;
+            padding-top: 30px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <header id="fejlec" class="fejlec">
+        Videó lejátszása
+    </header>
+
+    <section id="tartalom">
+        <video id="videom" width="640" controls>
+            <source src="kepek_videok/HTML5_video2.mp4" type="video/mp4">
+            A böngésződ nem támogatja a HTML videók lejátszását.
+        </video>
+
+        <br /><br />
+
+        <button onClick="videom.play()">indítás</button>
+        <button onClick="videom.pause()">leállítás</button>
+        &nbsp;&nbsp;&nbsp;
+        <button onClick="indit_leallit()">indítás / leállítás </button>
+        <br /><br />
+        
+        <button onClick="videom.volume=0">néma</button>
+        <button onClick="videom.volume=0.2">halk</button>
+        <button onClick="videom.volume=1">hangos</button>
+
+        &nbsp;&nbsp;&nbsp;
+        <button onClick="videom.playbackRate=0.2">nagyon lassú</button>
+        <button onClick="videom.playbackRate=0.5">lassú</button>
+        <button onClick="videom.playbackRate=1">normál</button>
+        <button onClick="videom.playbackRate=2">gyorsabb</button>
+        <button onClick="videom.playbackRate=4">nagyon gyors</button>
+
+        <br /><br />
+        <button onClick="videom.width=320">kicsi</button>
+        <button onClick="videom.width=640">normál</button>
+        <button onClick="videom.width=1024">nagy</button>
+
+        &nbsp;&nbsp;&nbsp;
+        <button onClick="alert(videom.ended)">befejeződött-e</button>
+        <button onClick="alert(videom.duration)">videó hossza (mp)</button>
+        <button onClick="alert(videom.currentTime)">jelenlegi pozíció</button>
+
+    </section>
+
+    <footer id="lablec" class="lablec">
+        Forrás:
+        
+        <a href="http://www.w3schools.com/js/js_regexp.asp" target="ujablak">
+            http://www.w3schools.com/js/js_regexp.asp
+        </a>
+    </footer>
+
+    <script>
+        var videom= document.getElementById('videom');
+        function indit_leallit() {
+            if (videom.paused) {
+                videom.play();
+            }
+            else {
+                videom.pause();
+            }
+        }
+    </script>
+</body>
+</html>
