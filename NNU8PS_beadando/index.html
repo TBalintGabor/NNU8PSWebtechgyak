@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html">
+    <title>Weblap</title>
+    <style>
+        ul.menu {
+            background-color: chocolate;
+            padding: 3px;
+            margin: 3px;
+        }
+        
+        ul.menu li {
+            display: inline-flex;
+        }
+        
+        ul.menu li a {
+            display: block;
+            padding: 20px;
+            color: black;
+            font-weight: bolder;
+        }
+        
+        ul.menu li a:hover {
+            background-color: grey;
+        }
+
+        footer {
+            display: block;
+        }
+
+        .lablec {
+            font-size: 10pt;
+            width: 100%;
+            border-top: 3px black;
+            padding-top: 30px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body style="background-color: rgb(55, 188, 221)" >
+    <ul class="menu">
+        <li><a href="kezdolap.html" target="keret">Kezdőlap</a></li>
+        <li><a href="lezerfizika.html" target="keret">Műszaki lézerfizika</a></li>
+        <li><a href="scada2.html" target="keret">Ipari kommunikációs és SCADA rendszerek II.</a></li>
+        <li><a href="automatika2.html" target="keret">Automatika II.</a></li>
+        <li><a href="urlap.html" target="keret">Űrlap</a></li>
+    </ul>
+    <iframe name="keret" src="kezdolap.html" width="100%" height="480px" scrolling="auto" frameborder="0" marginheight="10" marginwidth="20">
+        A böngésző nem támogatja a belső keretek használatát!
+    </iframe>
+    <footer id="lablec" class="lablec">
+        &copy; Minden jog fenntartva
+    </footer>
+</body>
+</html>
