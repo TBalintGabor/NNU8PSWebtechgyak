@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Űrlap</title>
+    <link rel="stylesheet" href="stilus.css">
+</head>
+<body>
+    <header id="fejlec" class="fejlec">
+        Űrlap
+    </header>
+    
+    <section id="tartalom" class="urlap">
+        
+        <form id="urlap" name="urlap" action="feldolgozo.php" method="GET" terget="_self">
+            Név: <input type="text" id="nev" name="nev" placeholder="írd be a neved" autofocus autocomplete="off" required pattern="[a-zA-ZöüóúéáűíÖÜÓŐÚÉÁŰÍ]{5,50}" />
+            <br><br>
+            Életkor: <input type="number" name="eletkor" min="14" max="90" style="width: 50px">
+            <br /><br />
+            Melyik kurzus tematikája volt a kedvenced? <input type="text" name="tematika" list="tematika">
+            <datalist id="tematika">
+                <option value="Műszaki lézerfizika"></option>
+                <option value="Ipari kommunikációs és SCADA rendszerek II."></option>
+                <option value="Automatika II."></option>
+            </datalist>
+            <br /><br />
+
+        </form>
+        <br><br><br>
+
+        <input type="submit" value="ELKÜLDÖM" form="urlap" formaction="feldolgozo.php" formmethod="POST" />
+        &nbsp;&nbsp;&nbsp;
+        <input type="submit" value="Elküldöm ellenőrzés nélkül" form="urlap" formnovalidate formtarget="ujablak" />
+    </section>
+</body>
+</html>
